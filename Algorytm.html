@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Algorytm NWD</title>
+
+    <script type="text/javascript" src="Algorytm.js">
+    </script>
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+
+</head>
+
+<body>   
+ 
+    <h1>Algorytm NWD</h1><br>
+    <h2>Schemat blokowy</h2>
+    <img src = "Schemat.png" class="schemat"><br><br><br><br>
+    <h2>Kod cpp</h2>
+        <pre class="cpp" style="margin: 0; line-height: 125%"><span style="color: #557799">        #include &lt;iostream&gt;</span>
+        <span style="color: #008800; font-weight: bold">using</span> <span style="color: #008800; font-weight: bold">namespace</span> std;
+        <span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+        {
+            <span style="color: #333399; font-weight: bold">int</span> a, b, nwd;
+            cin <span style="color: #333333">&gt;&gt;</span> a <span style="color: #333333">&gt;&gt;</span> b;
+            <span style="color: #333399; font-weight: bold">while</span>(a!<span style="color: #333333">=</span>b)
+                <span style="color: #333399; font-weight: bold">if</span><span style="color: #333333">(a>b) a-=b;</span>
+                <span style="color: #333399; font-weight: bold">else</span><span style="color: #333333"> b-=a;</span>
+            nwd = a;  
+            <span style="color: #008800; font-weight: bold">cout</span><span style="color: #333333"><<</span> <span style="color: #333399; font-weight: bold">"NWD = "</span><span style="color: #333333"><<</span><span style="color: #333333">nwd<<</span> <span style="color: #008800; font-weight: bold">endl</span><span style="color: #333333">;</span> 
+        }   
+        </pre><br><br><br><br>
+
+    <h2>Kod Python</h2>
+    <pre class="python">
+        def NWD(a, b):
+            while a != b:
+                if a > b:
+                    a = a - b
+                else:
+                    b = b - a
+            return a
+                
+                
+        a = int(input())
+        b = int(input())
+        
+        print(NWD(a, b)</pre><br><br><br><br>
+            
+
+    <h2>Kod JavaScript</h2>
+    <pre class="js">
+        function oblicz(){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        
+    
+    
+        while (a != b){
+            if (a > b)
+                {
+                    a = a - b;
+                }
+    
+                else 
+                {
+                    b = b - a;
+                }
+                
+        }
+        document.getElementById('wynik').innerHTML = a;
+            
+    }</pre><br><br><br><br>
+            
+
+    <h2>Skrypt JavaScript</h2>  
+    <p>Skrypt JS podaje NWD z liczb a i b</p>
+    <h3>
+        <label for ="a" >Podaj a    <label>    
+        <input type="text" dir="rtl" id="a" class="wejście">
+        <label for ="b" >Podaj b <label>
+        <input type="text" dir="rtl" id="b" class="wejście">
+        <input type="button" class="przycisk" value="Oblicz" onclick="oblicz()"/>
+    </h3>
+
+    <h4>
+        Wynik: 
+        <div class=  "wynik" id="wynik">0</div>
+    </h4><br><br><br><br><br><br>
+
+    
+
+
+
+
+
+
+</body>
+</html>    
